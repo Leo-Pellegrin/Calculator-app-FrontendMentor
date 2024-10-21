@@ -1,0 +1,48 @@
+* {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+body {
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(60, 10%, 19%);
+}
+
+.result {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.calc {
+    background-color: hsl(0, 0%, 93%);
+}
+
+.calcbutton {
+    background-color: hsl(45, 7%, 89%);
+    color: hsl(221, 14%, 31%);
+    box-shadow: 0 5px hsl(35, 11%, 61%);
+}
+
+.deletebutton {
+    background-color: hsl(185, 42%, 37%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0 5px hsl(185, 58%, 25%);
+}
+
+.resetbutton {
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0 5px hsl(185, 58%, 25%);
+    color: hsl(0, 0%, 100%);
+}
+
+.equalbutton {
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: 0 5px hsl(25, 99%, 27%);
+    color: hsl(0, 0%, 100%);
+}
+
+.toggle-inputs {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.toggle-slider {
+    background-color: hsl(25, 98%, 40%);
+}

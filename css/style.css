@@ -1,0 +1,238 @@
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 700;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-gap: 20px;
+        padding: 20px;
+        width: 50%;
+        margin-inline: auto;
+        align-items: center;
+    }
+
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .theme {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .themetitle {
+        font-size: 13px;
+        margin-right: 2.2em;
+        margin-top: 1.5em;
+    }
+
+    .result {
+        height: 130px;
+        font-size: 32px;
+        border-radius: 0.5em;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 50px;
+        padding-right: 0.5em;
+    }
+
+    .calc {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5em;
+        padding: 2em;
+        border-radius: 0.5em;
+    }
+
+
+    .calcbutton {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        border-radius: 0.3em;
+    }
+
+    .resetbutton,
+    .equalbutton {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: span 2;
+        font-size: 25px;
+        border-radius: 0.5em;
+    }
+
+    .deletebutton {
+        font-size: 25px;
+    }
+
+    .toggle-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 80px;
+    }
+
+    .labels-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .labels-container label {
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 5px;
+        z-index: 1;
+    }
+
+    .toggle-inputs {
+        position: relative;
+        width: 80px;
+        height: 30px;
+
+        border-radius: 25px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        z-index: 0;
+    }
+
+    .toggle-inputs input[type="radio"] {
+        display: none;
+    }
+
+    .toggle-slider {
+        position: absolute;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    #option1:checked~.toggle-slider {
+        transform: translateX(0);
+    }
+
+    #option2:checked~.toggle-slider {
+        transform: translateX(24px);
+    }
+
+    #option3:checked~.toggle-slider {
+        transform: translateX(50px);
+    }
+
+    @media (max-width: 375px) {
+        .grid-container {
+            width: 80%;
+            /* Ajuster la largeur pour les petits écrans */
+            padding: 10px;
+            /* Réduire le padding */
+        }
+
+        .title {
+            font-size: 30px;
+            margin-top: 0.5em;
+            /* Réduire la taille de la police du titre */
+        }
+
+        .themetitle {
+            font-size: 12px;
+            /* Réduire la taille de la police pour le titre du thème */
+        }
+
+        .result {
+            font-size: 40px;
+            /* Réduire la taille de la police du résultat */
+            height: 100px;
+
+            padding-top: 0.2em;
+        }
+
+        .calc {
+            gap: 0.8em;
+            padding: 1em;
+        }
+
+        .calcbutton {
+            font-size: 24px;
+            /* Réduire la taille de la police des boutons */
+            height: 40px;
+        }
+
+        .deletebutton {
+            font-size: 17px;
+        }
+
+        .resetbutton,
+        .equalbutton {
+            font-size: 18px;
+            /* Réduire la taille de la police des boutons RESET et = */
+            height: 50px;
+            /* Réduire la hauteur */
+        }
+
+        .toggle-container {
+            width: 70px;
+            /* Réduire la largeur du toggle */
+        }
+
+        .toggle-slider {
+            width: 18px;
+            /* Réduire la largeur du toggle slider */
+            height: 18px;
+            /* Réduire la hauteur du toggle slider */
+        }
+
+        #option1:checked~.toggle-slider {
+            transform: translateX(0);
+        }
+
+        #option2:checked~.toggle-slider {
+            transform: translateX(26px);
+        }
+
+        #option3:checked~.toggle-slider {
+            transform: translateX(48px);
+        }
+    }
